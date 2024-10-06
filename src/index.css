@@ -1,13 +1,134 @@
+/* src/index.css */
+
+/* General Styles */
 body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background-color: #f9fafb;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.app-container {
+  background-color: #fff;
+  max-width: 600px;
+  padding: 30px;
+  margin: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+}
+
+/* Headings */
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 25px;
+}
+
+/* Styling the Total Expenses Display */
+.total-expenses {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #2a9d8f;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+/* Category Filter */
+.filter-container {
+  margin-bottom: 20px;
+}
+
+.filter-container label,
+.filter-container select {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+select {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+/* Form Styles */
+form {
+  display: grid;
+  gap: 15px;
+}
+
+input, select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: #f9f9f9;
+}
+
+input:focus,
+select:focus {
+  border-color: #2a9d8f;
+  outline: none;
+}
+
+button {
+  background-color: #2a9d8f;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #21867a;
+}
+
+/* Expense List */
+.expense-list {
+  margin-top: 25px;
+}
+
+.expense-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  border: 1px solid #eee;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.expense-item button {
+  background-color: #e63946;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.expense-item button:hover {
+  background-color: #d62839;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .app-container {
+    max-width: 90%;
+    padding: 20px;
+  }
+
+  button {
+    width: 100%;
+  }
 }
